@@ -4,3 +4,5 @@ påbörjat skrivandet av projektplanen. Går långsamt.
 nav skapandet, och alla deadlines.
 
 20/4 märkt att jag ej pushat till github när jag tidigare jobbat.
+    Gjort wireframe redo för inlämning och lämnat in den.
+    
