@@ -3,20 +3,6 @@
     --card-color: rgb(23, 23, 23);
   }
 
-  @keyframes rotate{
-    from {
-      rotate: 0deg;
-    }
-    
-    50% {
-      scale: 1 1.5;
-    }
-    
-    to {
-      rotate: 360deg;
-    }
-  }
-  
   body {
     align-items: center;
     background-color: var(--bg-color);
@@ -28,31 +14,6 @@
     padding: 0px;
   }
 
-  #blob {
-    animation: rotate 20s infinite;
-    aspect-ratio: 1;
-    background-color: white;
-    background: linear-gradient(
-      to right,
-      aquamarine,
-      purple
-    );
-    height:500px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    translate: -50% -50%;
-    border-radius:50%;
-  }
-  
-  #blur {
-    height:100%;
-    width:100%;
-    position: absolute;
-    z-index: 2;
-    backdrop-filter: blur(200px);
-  }
-  
   #cards {
     display: flex;
     flex-wrap: wrap;

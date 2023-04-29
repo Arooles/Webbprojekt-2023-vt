@@ -17,3 +17,6 @@ har påbörjat den första sidan av mitt projekt i Codepen så jag ser i reell t
 jag har gjort klart mitt första element av den första sidan. "cards" som kommer innehålla olika ikoner och texter med olika effekter.
 Jag har gjort klart det andra elementet på den förste sidan. "blured blob". Den följer musen och är lugnande att kolla på. "Blured Blob" ska även vara på alla 3 sidorna.
 
+29/04
+jag har gjort valet att inte använda mig utav det andra elementet "Blured Blob" då den gör webbsidan väldigt seg och fungerar inte 100% av tiden även utan någon ändring
+av koden emellan dator / skärm byte.
