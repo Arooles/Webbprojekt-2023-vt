@@ -20,3 +20,8 @@ Jag har gjort klart det andra elementet på den förste sidan. "blured blob". De
 29/04
 jag har gjort valet att inte använda mig utav det andra elementet "Blured Blob" då den gör webbsidan väldigt seg och fungerar inte 100% av tiden även utan någon ändring
 av koden emellan dator / skärm byte.
+
+01/05
+Jag har ändar om lite i koden då ett element jag först tänkt ha som "homepage" fungerade bättre i samband med "Contactpage" elementen. Har gjort 90% klart min Nav meny, behöver enbart
+hitta bättre bilder än de 3 placeholder fotorna jag tog från en stockphotos sida.
+har gjort klart min Homepage.
