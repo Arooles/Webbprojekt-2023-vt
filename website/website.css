@@ -203,7 +203,7 @@ transition: transform, opacity;
 #wrapper {
   aspect-ratio: 1.6;
   position: relative;
-  width: 60vw;
+  width: 80vw;
 }
 
 #wrapper > .shape {
