@@ -1,9 +1,9 @@
 /* -- Used on all sites -- */
 :root {
   --bg-color: rgb(20, 20, 20);
-  --card-color: rgb(23, 23, 23);
-    
-  --primary-rgb: 0 83 255;
+  --screen1-rgb: 0 83 255;
+  --screen2-rgb: 0 83 255;
+  --screen3-rgb: 0 83 255;
 }
 
 body {
@@ -131,7 +131,6 @@ transition: transform, opacity;
 .rubik-font {
   font-family: "Rubik", sans-serif;
 }
-
 
 /* -- landing Zone -- */
 
@@ -443,16 +442,37 @@ transition: transform, opacity;
   box-sizing: border-box;
 }
 
+section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2vw;
+  flex-direction: row;
+}
+
 #screen {
   width: 500px;
   display: flex;
-  border: 3px solid rgb(var(--primary-rgb) / 80%);
   aspect-ratio: 10 / 16;
   border-radius: 1rem;
-  background-color: rgb(var(--primary-rgb) / 15%);
   overflow: hidden;
   position: relative;
   z-index: 10;
+}
+
+.screen1 {
+  background-color: rgb(var(--screen1-rgb) / 15%);
+  border: 3px solid rgb(var(--screen1-rgb) / 80%);
+}
+
+.screen2 {
+  background-color: rgb(var(--screen2-rgb) / 15%);
+  border: 3px solid rgb(var(--screen2-rgb) / 80%);
+}
+
+.screen3 {
+  background-color: rgb(var(--screen3-rgb) / 15%);
+  border: 3px solid rgb(var(--screen3-rgb) / 80%);
 }
 
 #screen:after,
@@ -480,25 +500,55 @@ transition: transform, opacity;
   border-top-right-radius: 1rem;
 }
 
-.screen-overlay {    
-  background: linear-gradient(
-    rgb(var(--primary-rgb) / 0.15),
-    rgb(var(--primary-rgb) / 0.15) 3px,
-    transparent 3px,
-    transparent 9px
-  );
-  background-size: 100% 9px;
-  height: 100%;
-  width: 100%;
+.screen-overlay {
   animation: pan-overlay 22s infinite linear;
-  position: absolute;
-  z-index: 2;
   left: 0px;
   top: 0px;
 }
 
+.screen-overlay1 {
+  background: linear-gradient(
+    rgb(var(--screen1-rgb) / 0.15),
+    rgb(var(--screen1-rgb) / 0.15) 3px,
+    transparent 3px,
+    transparent 9px
+  );
+  position: absolute;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  background-size: 100% 9px;
+}
+
+.screen-overlay2 {
+  background: linear-gradient(
+    rgb(var(--screen2-rgb) / 0.15),
+    rgb(var(--screen2-rgb) / 0.15) 3px,
+    transparent 3px,
+    transparent 9px
+  );
+  position: absolute;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  background-size: 100% 9px;
+}
+
+.screen-overlay3 {
+  background: linear-gradient(
+    rgb(var(--screen3-rgb) / 0.15),
+    rgb(var(--screen3-rgb) / 0.15) 3px,
+    transparent 3px,
+    transparent 9px
+  );
+  position: absolute;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  background-size: 100% 9px;
+}
+
 #screen > .screen-image {
-  background-image: url("../images/scenery.jpeg");
   height: 100%;
   width: 100%;
   position: absolute;
@@ -507,9 +557,24 @@ transition: transform, opacity;
   top: 0px;
   background-size: 300%;
   background-position: 0% 0%;
-  filter: sepia(100%) hue-rotate(160deg);
   opacity: 0.6;
   animation: pan-image 15s linear infinite;
+}
+
+.screen1 > .screen-image {
+  background-image: url("../images/tokyoSquare.jpg");
+  filter: sepia(10%) hue-rotate(160deg);
+
+}
+
+.screen2 > .screen-image {
+  background-image: url("../images/scenery.jpeg");
+  filter: saturate(200%) hue-rotate(90deg);
+}
+
+.screen3 > .screen-image {
+  background-image: url("../images/holoJacket.jpg");
+  filter:saturate(120%);
 }
 
 #screen > .screen-content {
@@ -523,8 +588,19 @@ transition: transform, opacity;
   z-index: 3;
   margin: 1rem;
   padding-bottom: 6rem;
-  border: 1px solid rgb(var(--primary-rgb) / 50%);
   border-radius: 0.6rem;
+}
+
+.screen1 > .screen-content {
+  border: 1px solid rgb(var(--screen1-rgb) / 50%);
+}
+
+.screen2 > .screen-content {
+  border: 1px solid rgb(var(--screen2-rgb) / 50%);
+}
+
+.screen3 > .screen-content {
+  border: 1px solid rgb(var(--screen3-rgb) / 50%);
 }
 
 #screen > .screen-content > .screen-icon {
@@ -546,9 +622,25 @@ transition: transform, opacity;
   content: "";
   position: absolute;
   top: 0px;
-  background-color: rgb(var(--primary-rgb));
   border-radius: 1rem;
-  box-shadow: 0px 0px 8px 3px rgb(var(--primary-rgb) / 60%);
+}
+
+.screen1 > .screen-content > .screen-user:before,
+.screen1 > .screen-content > .screen-user:after {
+background-color: rgb(var(--screen1-rgb));
+box-shadow: 0px 0px 8px 3px rgb(var(--screen1-rgb) / 60%);
+}
+
+.screen2 > .screen-content > .screen-user:before,
+.screen2 > .screen-content > .screen-user:after {
+background-color: rgb(var(--screen2-rgb));
+box-shadow: 0px 0px 8px 3px rgb(var(--screen2-rgb) / 60%);
+}
+
+.screen3 > .screen-content > .screen-user:before,
+.screen3 > .screen-content > .screen-user:after {
+background-color: rgb(var(--screen3-rgb));
+box-shadow: 0px 0px 8px 3px rgb(var(--screen3-rgb) / 60%);
 }
 
 #screen > .screen-content > .screen-user:before {
@@ -614,6 +706,9 @@ transition: transform, opacity;
   #screen {
     scale: 0.6;
     margin-bottom: 0rem;
+  }
+  section{
+     flex-direction: column;
   }
 }
 

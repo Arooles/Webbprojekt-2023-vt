@@ -22,6 +22,11 @@ jag har gjort valet att inte använda mig utav det andra elementet "Blured Blob"
 av koden emellan dator / skärm byte.
 
 01/05
-Jag har ändar om lite i koden då ett element jag först tänkt ha som "homepage" fungerade bättre i samband med "Contactpage" elementen. Har gjort 90% klart min Nav meny, behöver enbart
-hitta bättre bilder än de 3 placeholder fotorna jag tog från en stockphotos sida.
+Jag har ändar om lite i koden då ett element jag först tänkt ha som "homepage" fungerade bättre i samband med "Contactpage" elementen. Har gjort 90% klart min Nav meny,
+behöver enbart hitta bättre bilder än de 3 placeholder fotorna jag tog från en stockphotos sida.
 har gjort klart min Homepage.
+
+04/05
+Jag har till 90% gjort klart alla tre sidor av mitt projekt, det som är kvar är att finslipa alla delar och bilder. fixa buggar, så som den som uppstod idag då jag gjorde
+min "artwall" vilket gör att den inte vill bete sig som jag vill den ska. Funkar på codepen som enstaka element, men då det kommer in i det gemensamma website.js och 
+website.css vill den inte riktikt fungera som den är tänkt.
