@@ -2,20 +2,28 @@ const toggleNav = () => {
   document.body.dataset.nav = document.body.dataset.nav === "true" ? "false" : "true";
 }
 
-let contactCards = document.getElementById("cards")
+const gallery = document.getElementById("gallery");
 
-if ( contactCards !== null ){
-
-document.getElementById("cards").onmousemove = e => {
-  for(const card of document.getElementsByClassName("card")) {
-    const rect = card.getBoundingClientRect(),
-          x = e.clientX - rect.left,
-          y = e.clientY - rect.top;
-
-    card.style.setProperty("--mouse-x", `${x}px`);
-    card.style.setProperty("--mouse-y", `${y}px`);
-  };
-}
+window.onmousemove = e => {
+  const mouseX = e.clientX,
+        mouseY = e.clientY;
+  
+  const xDecimal = mouseX / window.innerWidth,
+        yDecimal = mouseY / window.innerHeight;
+  
+  const maxX = gallery.offsetWidth - window.innerWidth,
+        maxY = gallery.offsetHeight - window.innerHeight;
+  
+  const panX = maxX * xDecimal * -1,
+        panY = maxY * yDecimal * -1;
+  
+  gallery.animate({
+    transform: `translate(${panX}px, ${panY}px)`
+  }, {
+    duration: 10000,
+    fill: "forwards",
+    easing: "ease"
+  })
 }
 
 let homeWrapper = document.getElementById("wrapper")
@@ -54,3 +62,42 @@ setInterval(() => {
   prev = index;
 }, 3000);
 }
+
+let pxScreen = document.getElementById("screen");
+
+if ( pxScreen !== null ) {
+
+  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+  let interval = null;
+
+  const screen = document.querySelector(".screen"),
+        name = document.querySelector(".name");
+
+  screen.onmouseenter = event => {  
+    let iteration = 0;
+    
+    clearInterval(interval);
+    
+    interval = setInterval(() => {
+      name.innerText = name.innerText
+        .split("")
+        .map((letter, index) => {
+          if(index < iteration) {
+            return name.dataset.value[index];
+          }
+        
+          return letters[Math.floor(Math.random() * 26)]
+        })
+        .join("");
+      
+      if(iteration >= name.dataset.value.length){ 
+        clearInterval(interval);
+      }
+      
+      iteration += 1 / 3;
+    }, 30);
+  }
+}
+
+
