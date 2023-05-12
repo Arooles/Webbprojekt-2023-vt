@@ -34,3 +34,7 @@ website.css vill den inte riktikt fungera som den är tänkt.
 05/05
 Hände inte så mycket på lektionen, sökte på hur man kunde "återgå" till en random text på mina screens (de som ersatte cards då dem inte riktigt fungerade utanför codepen.)
 Har undersökt och kommit fram till att "position:relative" i mitt main atribut gör så min artwall inte fungerar som den ska. påbörjat undersökning om hur det kan fidxas.
+
+12/05
+Jag har löst problemet med min artwall. Jag har gjort ett färgdirektiv så jag har snabbt tillgägnliga så de behövs.
+Jag har ändrat mina "screens" färger till de rätta. Jag har gjort plan i huvudet vad jag har kvar att göra. 

@@ -23,7 +23,7 @@ if ( artWall !== null ){
     gallery.animate({
       transform: `translate(${panX}px, ${panY}px)`
     }, {
-      duration: 4000,
+      duration: 1000,
       fill: "forwards",
       easing: "ease"
     })
