@@ -387,8 +387,8 @@ transition: transform, opacity;
 
 /* -- Project X -- */
 
-@keyframes pan-image {  
-  0% {
+@keyframes pan-image1 {  
+  0% { /* 1st */
     background-position: 36% 42%;
     background-size: 200%;
   }
@@ -398,7 +398,7 @@ transition: transform, opacity;
     background-size: 200%;
   }
   
-  20.0001% { /* -- View 2 -- */
+  20.0001% { /* 2nd */
     background-position: 60% 85%;
     background-size: 500%;
   }
@@ -408,7 +408,7 @@ transition: transform, opacity;
     background-size: 500%;
   }
   
-  40.0001% { /* -- View 3 -- */
+  40.0001% { /* 3rd */
     background-position: 80% 42%;
     background-size: 300%;
   }
@@ -418,7 +418,7 @@ transition: transform, opacity;
     background-size: 300%;
   }
   
-  60.0001% { /* -- View 4 -- */
+  60.0001% { /* 4th */
     background-position: 0% 0%;
     background-size: 300%;
   }
@@ -428,7 +428,111 @@ transition: transform, opacity;
     background-size: 300%;
   }
   
-  80.0001% { /* -- View 5 -- */
+  80.0001% { /* 5th */
+    background-position: 80% 10%;
+    background-size: 300%;
+  }
+  
+  100% {
+    background-position: 72% 14%;
+    background-size: 300%;
+  }
+}
+
+@keyframes pan-image2 {  
+  0% { /* 1st */
+    background-position: 36% 42%;
+    background-size: 200%;
+  }
+  
+  20% {
+    background-position: 30% 35%;
+    background-size: 200%;
+  }
+  
+  20.0001% { /* 2nd */
+    background-position: 60% 85%;
+    background-size: 500%;
+  }
+  
+  40% {
+    background-position: 49% 81%;
+    background-size: 500%;
+  }
+  
+  40.0001% { /* 3rd */
+    background-position: 80% 42%;
+    background-size: 300%;
+  }
+  
+  60% {
+    background-position: 84% 33%;
+    background-size: 300%;
+  }
+  
+  60.0001% { /* 4th */
+    background-position: 0% 0%;
+    background-size: 300%;
+  }
+  
+  80% {
+    background-position: 15% 4%;
+    background-size: 300%;
+  }
+  
+  80.0001% { /* 5th */
+    background-position: 80% 10%;
+    background-size: 300%;
+  }
+  
+  100% {
+    background-position: 72% 14%;
+    background-size: 300%;
+  }
+}
+
+@keyframes pan-image3 {  
+  0% { /* 1st */
+    background-position: 36% 42%;
+    background-size: 200%;
+  }
+  
+  20% {
+    background-position: 30% 35%;
+    background-size: 200%;
+  }
+  
+  20.0001% { /* 2nd */
+    background-position: 60% 85%;
+    background-size: 500%;
+  }
+  
+  40% {
+    background-position: 49% 81%;
+    background-size: 500%;
+  }
+  
+  40.0001% { /* 3rd */
+    background-position: 80% 42%;
+    background-size: 300%;
+  }
+  
+  60% {
+    background-position: 84% 33%;
+    background-size: 300%;
+  }
+  
+  60.0001% { /* 4th */
+    background-position: 0% 0%;
+    background-size: 300%;
+  }
+  
+  80% {
+    background-position: 15% 4%;
+    background-size: 300%;
+  }
+  
+  80.0001% { /* 5th */
     background-position: 80% 10%;
     background-size: 300%;
   }
@@ -565,22 +669,23 @@ transition: transform, opacity;
   top: 0px;
   background-size: 300%;
   background-position: 0% 0%;
-  opacity: 0.6;
-  animation: pan-image 15s linear infinite;
-}
+  opacity: 0.6;}
 
 .screen1 > .screen-image {
+  animation: pan-image1 15s linear infinite;
   background-image: url("../images/tokyoSquare.jpg");
   filter: sepia(10%) hue-rotate(160deg);
 
 }
 
 .screen2 > .screen-image {
+  animation: pan-image2 15s linear infinite;
   background-image: url("../images/scenery.jpeg");
   filter: saturate(200%) hue-rotate(90deg);
 }
 
 .screen3 > .screen-image {
+  animation: pan-image3 15s linear infinite;
   background-image: url("../images/holoJacket.jpg");
   filter:saturate(120%);
 }
@@ -698,12 +803,17 @@ box-shadow: 0px 0px 8px 3px rgb(var(--screen3-rgb) / 60%);
 }
 
 #screen > .screen-content > .screen-user > .link {  
-  opacity: 0.8;
+  opacity: 0;
   font-size: 1.5rem;
   text-shadow: 0px 0px 0.5rem white;
   font-weight: 400;
   letter-spacing: 0.3rem;
   text-decoration: none;
+  transition: 1.8s;
+}
+#screen:hover > .screen-content > .screen-user > .link {
+  opacity: 0.8;
+  transition: 1.8s;
 }
 
 #screen > .screen-content > .screen-user > .link:is(:hover, :focus) {  
