@@ -41,3 +41,8 @@ Jag har ändrat mina "screens" färger till de rätta. Jag har gjort plan i huvu
 
 15/05
 Jag har gjort så att när jag hoverar mina screen's så kommer länken fram. sedan då man slutar hovera screenen så "fadears" länken ut.
+
+18/05
+Jag har fått min "scramble" text effect att fungera på mina screens så den delen av webbsidan är helt färdig. Alla bilder är korrekta och rätt placerade på min artWall vilket
+leder till att den sidan också är färdig.
+Jar har gjort klart alla sidor och gått igenom min kord och gjort så den ser bra ut.
